@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.poit.transport.controller.EditController">
+   <children>
+      <TextField fx:id="busModelInput" layoutX="122.0" layoutY="84.0" prefHeight="26.0" prefWidth="226.0" />
+      <TextField fx:id="busColorInput" layoutX="122.0" layoutY="130.0" prefHeight="26.0" prefWidth="226.0" />
+      <TextField fx:id="busWheelsCountInput" layoutX="122.0" layoutY="176.0" prefHeight="26.0" prefWidth="226.0" />
+      <TextField fx:id="passengerCapacityInput" layoutX="122.0" layoutY="221.0" prefHeight="26.0" prefWidth="226.0" />
+      <Label layoutX="33.0" layoutY="87.0" prefHeight="19.0" prefWidth="41.0" text="Model">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="133.0" text="Color">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="179.0" text="Wheels">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="224.0" text="Passenger capacity">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="7.0" text="Bus">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="busUpdateBtn" layoutX="161.0" layoutY="257.0" minWidth="75.0" mnemonicParsing="false" onAction="#updateBus" prefHeight="26.0" prefWidth="75.0" text="Update" />
+      <TextField fx:id="busIdInput" layoutX="122.0" layoutY="41.0" prefHeight="26.0" prefWidth="226.0" />
+      <Label layoutX="48.0" layoutY="44.0" prefHeight="19.0" prefWidth="41.0" text="ID">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.poit.transport.controller.MainController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuSaveBinary" mnemonicParsing="false" onAction="#saveTransportBinary" text="save binary" />
+                  <MenuItem fx:id="menuSaveJson" mnemonicParsing="false" onAction="#saveTransportJson" text="save json" />
+                  <MenuItem fx:id="menuSaveCustom" mnemonicParsing="false" onAction="#saveTransportCustom" text="save custom" />
+                  <MenuItem fx:id="menuLoadBinary" mnemonicParsing="false" onAction="#loadTransportBinary" text="load binary" />
+                  <MenuItem fx:id="menuLoadJson" mnemonicParsing="false" onAction="#loadTransportJson" text="load json" />
+                  <MenuItem fx:id="menuLoadCustom" mnemonicParsing="false" onAction="#loadTransportCustom" text="load custom" />
+                  <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#viewSaveWindow" text="save..." />
+                  <MenuItem fx:id="menuLoad" mnemonicParsing="false" onAction="#viewLoadWindow" text="load..." />
+                  <MenuItem mnemonicParsing="false" onAction="#strongEncrypt" text="Strong encrypt" />
+                  <MenuItem mnemonicParsing="false" onAction="#strongDecrypt" text="Strong decrypt" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Add">
+            <items>
+                  <MenuItem fx:id="menuAddCar" mnemonicParsing="false" onAction="#viewCarCreationWindow" text="Car" />
+                  <MenuItem fx:id="menuAddBus" mnemonicParsing="false" onAction="#viewBusCreationWindow" text="Bus" />
+                  <MenuItem fx:id="menuAddPlane" mnemonicParsing="false" onAction="#viewPlaneCreationWindow" text="Plane" />
+                  <MenuItem fx:id="menuAddHelicopter" mnemonicParsing="false" onAction="#viewHelicopterCreationWindow" text="Helicopter" />
+              <MenuItem fx:id="menuAddBoat" mnemonicParsing="false" onAction="#viewBoatCreationWindow" text="Boat" />
+                  <MenuItem fx:id="menuAddShip" mnemonicParsing="false" onAction="#viewShipCreationWindow" text="Ship" />
+                  <MenuItem fx:id="menuAddOther" mnemonicParsing="false" onAction="#viewOtherCreationWindow" text="Other..." />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem fx:id="menuEditCar" mnemonicParsing="false" onAction="#viewCarUpdateWindow" text="Car" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewBusUpdateWindow" text="Bus" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewPlaneUpdateWindow" text="Plane" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewHelicopterUpdateWindow" text="Helicopter" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewBoatUpdateWindow" text="Boat" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewShipUpdateWindow" text="Ship" />
+                  <MenuItem fx:id="menuEditOther" mnemonicParsing="false" onAction="#viewOtherEditWindow" text="Other..." />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Delete">
+               <items>
+                  <MenuItem fx:id="menuDeleteById" mnemonicParsing="false" onAction="#viewTransportDeleteWindow" text="by id" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="transportTable" editable="true" layoutX="7.0" layoutY="29.0" prefHeight="440.0" prefWidth="996.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="30.0">
+        <columns>
+          <TableColumn fx:id="typeColumn" prefWidth="138.39999389648438" text="Type" />
+          <TableColumn fx:id="idColumn" minWidth="130.0" prefWidth="130.0" text="ID" />
+            <TableColumn fx:id="modelColumn" prefWidth="132.0" text="Model" />
+            <TableColumn fx:id="colorColumn" minWidth="0.0" prefWidth="124.79998779296875" text="Color" />
+            <TableColumn fx:id="infoColumn" minWidth="480.0" prefWidth="480.0" text="Information" />
+        </columns>
+      </TableView>
+      <Button fx:id="tableUdpateBtn" layoutX="2.0" layoutY="477.0" mnemonicParsing="false" onAction="#updateTable" prefHeight="33.0" prefWidth="996.0" text="Update table" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" />
+   </children>
+</AnchorPane>
